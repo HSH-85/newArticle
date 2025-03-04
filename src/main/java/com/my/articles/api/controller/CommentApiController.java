@@ -19,7 +19,8 @@ public class CommentApiController {
     private final CommentService commentService;
     private final ArticleService articleService;
 
-    public CommentApiController(CommentService commentService, ArticleService articleService) {
+    public CommentApiController(CommentService commentService,
+                                ArticleService articleService) {
         this.commentService = commentService;
         this.articleService = articleService;
     }
