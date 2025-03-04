@@ -24,8 +24,14 @@ public class ArticleController {
         this.articleService = articleService;
     }
 
+    @GetMapping("comment")
+    public String showComment() {
+        return "/articles/update_comment";
+    }
+
     @GetMapping({"", "/"})
     public String showAllArticles(Model model) {
+
         List<ArticleDTO> articles = articleService.getAllArticles();
         model.addAttribute("articles", articles);
         return "/articles/show_all";
