@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CommentDTO {
-    private Long id;
+    private Long CommentId;
     private String nickname;
     private String body;
 
@@ -25,7 +25,7 @@ public class CommentDTO {
 
     public static Comment fromDto(CommentDTO dto) {
         Comment comment = new Comment();
-        comment.setId(dto.getId());
+        comment.setId(dto.getCommentId());
         comment.setNickname(dto.getNickname());
         comment.setBody(dto.getBody());
         return comment;
